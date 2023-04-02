@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./javascript/jQuery-1.12.4.js"></script>
+    <style>
+        .play-box {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            margin: 10px auto;
+            background-color: skyblue;
+        }
+
+        /* 唱片样式 */
+        .play1 {
+            background: url(img/play1.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 100px;
+            left: 250px;
+            width: 300px;
+            height: 300px;
+            margin-left: -150px;
+            animation: move 3s linear infinite paused;
+        }
+
+        .play2 {
+            background: url(img/play2.png) no-repeat;
+            background-size: 100%;
+            width: 50px;
+            height: 200px;
+            top: 5px;
+            left: 250px;
+            position: absolute;
+            margin-left: -25px;
+            transform: rotate(-60deg);
+            transform-origin: 20px 36px;
+            transition: all 1s;
+        }
+        .play-music{
+            transform: rotate(-38deg);
+        }
+        .music-go{
+            animation-play-state: running;
+            /* 指定正在进行的动画 */
+        }
+        @keyframes move{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="play-box">
+        <div id="play1" class="play1"></div>
+        <div id="play2" class="play2"></div>
+    </div>
+    <input type="button" id="play" value="Play">
+</body>
+<script>
+    $("#play").click(function () {
+        $("#play2").toggleClass("play-music")
+        $("#play1").toggleClass("music-go")
+      })
+</script>
+
+</html>

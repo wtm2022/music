@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./javascript/bootstrap-3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./javascript/jQuery-1.12.4.js"></script>
+  <script src="./javascript/cookie-tools.js"></script>
+  <script src="./javascript/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="./javascript/index.js"></script>
+  <title>Document</title>
+  <script>
+    $(function () {
+      if (getCookieByKey("loginName")) {
+        location.href = "main.html"
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <!-- 登录框 -->
+  <div class="login-box" id="login-box">
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="username">输入用户名：</label>
+        <input type="text" class="form-control" id="username" name="username" 
+        	placeholder="User name" required="required" autocomplete="off">
+        	<span id="msg"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">输入您的密码：</label>
+        <input type="password" class="form-control" id="password" name="password"
+        placeholder="Pass word" required="required"
+          autocomplete="off">
+      </div>
+      <div class="form-group mt-30">
+        <button type="button" class="btn btn-default btn-block btn-xs">登录</button>
+      </div>
+    </form>
+  </div>
+  <!-- 登录失败后的信息提示 -->
+  <div id="msg" class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+        aria-hidden="true">&times;</span></button>
+    <strong>警告!</strong>
+    <p>无法登录，请稍后再试</p>
+  </div>
+</body>
+
+</html>

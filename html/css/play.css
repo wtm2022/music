@@ -1,0 +1,66 @@
+.play-box {
+    position: absolute;
+    width: 420px;
+    height: 485px;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+}
+
+/* 唱片样式 */
+.play1 {
+    background: url(../img/play1.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    width: 240px;
+    height: 240px;
+    margin-left: -150px;
+    animation: move 3s linear infinite paused;
+}
+/* 播放杆的样式 */
+.play2 {
+    background: url(../img/play2.png) no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 180px;
+    top: 20px;
+    left: 240px;
+    position: absolute;
+    margin-left: -45px;
+    transform: rotate(-60deg);
+    transform-origin: 20px 36px;
+    transition: all 1s;
+}
+/* 播放杆播放时移动的内容 */
+.play-music{
+    transform: rotate(-38deg);
+}
+.music-go{
+    animation-play-state: running;
+    /* 指定正在进行的动画 */
+}
+/* 唱片旋转的动画 */
+@keyframes move{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 播放条样式 */
+.music_info_box{
+    position: absolute;
+    width: 300px;
+    top: 90%;
+    left: -20%;
+    margin-left: 150px;
+}
+.music_info{
+    height: 18px;
+    width: 300px;
+    background-color: red;
+    border: 1px solid rgba(255,255,255,0.6);
+}

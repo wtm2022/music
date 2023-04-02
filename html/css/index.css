@@ -1,0 +1,100 @@
+/* 公共类 */
+html,body{
+    height: 100%;
+}
+body{
+    background: url("../img/index.png") no-repeat top;
+    background-size: 100% 100%;
+}
+input{
+    outline: none;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mt40{
+    margin-top: 40px;
+}
+/* 登录框的样式 */
+.login-box{
+    background: url(../img/play1.png) no-repeat center;
+    width: 100px;
+    height: 100px;
+    background-size: 90% 90%;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+    animation: login-breath 1s linear infinite;
+    transition: all 1s;
+}
+/* 动画： */
+@keyframes login-breath {
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+/* 按钮的样式 */
+.login-box .btn-block{
+    color: skyblue;
+    font-size: 26px;
+}
+/* 表单隐藏的部分 */
+.login-form{
+    display: none;
+    padding: 28px 50px 30px;
+}
+/* 鼠标划过小图片 */
+.login-box:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+/* 放大后的样式 */
+.stop{
+    animation-play-state: paused;
+}
+.to-big{
+    width: 30%;
+    height: auto;
+    top: 40%;
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+}
+.on-backimg{
+    background-image: url("")
+}
+/* 弹框的样式 */
+.alert-danger{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -20%;
+    width: 40%;
+    height: 10%;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    border: 1px dotted rgba(255,255,255,0.5);
+}
+.alert-danger p{
+    text-align: center;
+    font-size: 24px;
+}

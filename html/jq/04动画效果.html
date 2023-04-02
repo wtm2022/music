@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javascript/jQuery-1.12.4.js"></script>
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">aaa</div>
+    <script>
+        // fadenIn  淡入
+        // fadeOut  淡出
+        $(function(){
+            var off = true;
+            $(document).click(function() {
+                if(off){
+                    $('#box').fadeOut(2000, function() {
+                        $(this).text("当前元素显示了");
+                    })
+                } else{
+                    $('#box').fadeIn(2000, function() {
+                        $(this).text("当前元素隐藏了");
+                    })
+                }
+                off =! off;
+            })
+        })
+    </script>
+</body>
+</html>

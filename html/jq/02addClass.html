@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javascript/jQuery-1.12.4.js"></script>
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px dashed red;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">aaa</div>
+    <!-- addClass 添加类的方法 
+        toggle 方法意思是集合了 addClass、removerClass移除类的方法
+    -->
+    <script>
+        $(".box").click(function(){
+            $(this).toggleClass("blue")
+        })
+    </script>
+</body>
+</html>
